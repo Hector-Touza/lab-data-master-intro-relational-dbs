@@ -1,0 +1,10 @@
+-- Todos los empleados
+SELECT * FROM EMPLOYEE;
+
+-- Proyectos y empleados involucrados
+SELECT 
+  e.NAM_EMPLOYEE, 
+  p.NAM_PROJECT
+FROM EMPLOYEE_PROJECT ep
+JOIN EMPLOYEE e ON ep.ID_EMPLOYEE = e.ID_EMPLOYEE
+JOIN PROJECT p ON ep.ID_PROJECT = p.ID_PROJECT;
